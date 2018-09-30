@@ -13,7 +13,7 @@
         }
         public override string ToString()
         {
-            return "Posição: " + linha + ", " + coluna;
+            return linha + ", " + coluna;
         }
     }
 }
