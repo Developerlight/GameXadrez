@@ -47,7 +47,7 @@ namespace GameXadres.tabuleiro
                 return false;
             }
             return true;
-            }
+        }
             public void validarPosicao(Posicao pos)
             {
                 if (!posicaoValida(pos))
@@ -56,6 +56,21 @@ namespace GameXadres.tabuleiro
                 }
 
             }
+
+        public Peca retirarPeca(Posicao pos)
+        {
+            if(peca(pos) == null)
+            {
+                return null;
+            }
+            else
+            {
+                Peca aux = peca(pos);
+                pecas[pos.linha, pos.coluna] = null;
+                return aux;
+            }
         }
+    }
+
     }
 

@@ -9,20 +9,29 @@ namespace GameXadres
         {
             try
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
+                while (!partida.terminada)
+                {
 
-                tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(0, 0));
-                tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-                tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(2, 2));
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab);
 
-                Tela.imprimirTabuleiro(tab);
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
+
+                    partida.executarMovimento(origem, destino);
+                }
+
             }
             catch(TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
             }
             Console.ReadLine();
+
 
         }
     }
