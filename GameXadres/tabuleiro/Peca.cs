@@ -44,7 +44,7 @@ namespace GameXadres.tabuleiro
             return false;
         }
 
-        public bool podeMoverPara(Posicao pos)
+        public bool movimentoPosivel(Posicao pos)
         {
             return movimentosPossiveis()[pos.linha, pos.coluna];
         }
