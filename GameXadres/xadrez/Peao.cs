@@ -12,7 +12,7 @@ namespace GameXadres.xadrez
         }
         public override string ToString()
         {
-            return "P";
+            return "P ";
         }
         public bool existeInimigo(Posicao pos)
         {

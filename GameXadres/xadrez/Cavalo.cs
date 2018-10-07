@@ -13,7 +13,7 @@ namespace GameXadres.xadrez
         }
         public override string ToString()
         {
-            return "C";
+            return "C ";
         }
         public bool podeMover(Posicao pos)
         {
